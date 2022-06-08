@@ -15,6 +15,7 @@ else:
     print(df1['weight'].max())
     print(df1.groupby('species_id')['record_id'].count()['AH'])
 
+
 #finally, se ejecuta independientemente de si el bloque try genera o no genera error
 #else, se ejecuta si no se genera error
 
