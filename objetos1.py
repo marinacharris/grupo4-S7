@@ -6,7 +6,7 @@
 # Al crear una clase se definen:
 #   los atributos o propiedades -> variables
 #   los métodos -> funciones
-# Al crear un onjeto de una clase, es lo mismo que decur: "crear una 
+# Al crear un objeto de una clase, es lo mismo que decir: "crear una 
 # INSTANCIA de una clase"
 
 #Crear una clase
@@ -17,13 +17,37 @@ class Persona:
     def mostrar(self)->str:
         return self.name
     
-x = Persona()
+x = Persona() # aquí creamos el objeto
 print(type(x))
 
 x.crear('María')
 x.name = 'Juan'
 print(x.mostrar())
 
+# El método __init__, es un método especial
+# Este método se ejecuta automáticamente cuando se crea el objeto (el constructor)
+# Y el objetivo de este método es inicializar los atributos del objeto
+# Este método no retorno datos y generalmente recibe parámetros para inicializar
+# algunas propiedades del objeto
+
+class Estudiante:
+    def __init__(self):
+        self.nombre = input('Digite el nombre del estudiante\n')
+        self.nota = float(input('Digite la nota del estudiante\n'))
+    def imprimir(self):
+        print('Nombre:', self.nombre)
+        print('Nota:', self.nota)    
+    def aprobar(self):
+        if self.nota >= 3.0:
+            print('Aprobó')
+        else:
+            print('No aprobó')
+            
+estudiante1 = Estudiante()
+estudiante1.imprimir()
+estudiante1.aprobar()
+
+                
     
     
     

@@ -1,0 +1,4 @@
+Hola mundo!!
+Este es un archivo de prueba 
+Vamos a aprender a manipular archivos de texto!
+Bye
